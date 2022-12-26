@@ -1,7 +1,17 @@
 body {
-    background-color: powderblue;
+    background-image: url("20221224_181942523_iOS.jpg");
+    background-size: 100%;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
+    color: goldenrod;
+}
+
+p {
+    color: lightgray;
+}
+
+ul #bullet {
+    color: red;
 }
