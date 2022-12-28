@@ -6,6 +6,22 @@ body {
     margin: 0;
 }
 
+mark {
+    background-color: rgb(203, 232, 248);
+}
+
+img {
+    max-width: 20%;
+}
+
+ol {
+    list-style-type: armenian;
+}
+
+ul {
+    list-style-type: square;
+}
+
 #space-img {
     background-image: url("images/space.jpg");
 }
@@ -20,6 +36,26 @@ body {
 
 #mangroves-img {
     background-image: url("images/mangroves.jpg");
+}
+
+#jellyfish-img {
+    background-image: url("images/jellyfish.jpg");
+}
+
+#desert-img {
+    background-image: url("images/desert.jpg");
+}
+
+#cabin-img {
+    background-image: url("images/cabin.jpg");
+}
+
+#mountain-img {
+    background-image: url("images/mountain.jpg");
+}
+
+#fish-img {
+    background-image: url("images/fish.jpg");
 }
 
 #space-img h1 {
