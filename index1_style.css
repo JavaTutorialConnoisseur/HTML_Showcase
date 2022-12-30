@@ -6,22 +6,20 @@ body {
     margin: 0;
 }
 
-mark {
-    background-color: rgb(203, 232, 248);
-}
-
+/* Links, highlights and underlining ------------------------------------------------- */
 a {
     color: rgb(105, 197, 247);
+}
+
+mark {
+    background-color: rgb(203, 232, 248);
 }
 
 .underline-less{
     text-decoration: none;
 }
 
-img {
-    max-width: 20%;
-}
-
+/* Tables and table elements --------------------------------------------------------- */
 table {
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +56,12 @@ thead > * {
     border: 3px solid black;
 }
 
+/* Images ---------------------------------------------------------------------------- */
+img {
+    max-width: 20%;
+}
+
+/* Lists (ordered and unordered) ----------------------------------------------------- */
 ol ol {
     list-style-type: lower-greek;
 }
@@ -70,6 +74,12 @@ ul ul{
     list-style: circle;
 }
 
+#ordered, #unordered {
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+/* Background images ----------------------------------------------------------------- */
 #space-img {
     background-image: url("images/space.jpg");
 }
@@ -106,25 +116,11 @@ ul ul{
     background-image: url("images/fish.jpg");
 }
 
-#space-img h1 {
+#space-img h1 { /* Starting image padding */
     padding-top: 25%;
 }
 
-#trailer-icon {
-    color: white;
-    font-size: 60%;
-    text-align: center;
-    position: relative;
-    top: -9%;
-}
-
-.scrolling h1 {
-    text-align: center;
-    padding: 35% 0;
-    margin: 0;
-    color: aliceblue;    
-}
-
+/* Main page divs, scrolling background image formatting ----------------------------- */
 .scrolling {
     background-attachment: fixed;
     background-position: center;
@@ -135,15 +131,18 @@ ul ul{
     opacity: 97%;
 }
 
-#ordered, #unordered {
-    padding-left: 40%;
-    padding-right: 40%;
+.scrolling h1 {
+    text-align: center;
+    padding: 35% 0;
+    margin: 0;
+    color: aliceblue;    
 }
 
 .mid-scroll {
     padding: 10% 0;
 }
 
+/* Mouse trailer, icons on top and on-hover behavior --------------------------------- */
 #mouse-trailer {
     height: 20px;
     width: 20px;
@@ -163,4 +162,12 @@ ul ul{
 
 body:hover > #mouse-trailer {
     opacity: 1;
+}
+
+#trailer-icon {
+    color: white;
+    font-size: 60%;
+    text-align: center;
+    position: relative;
+    top: -9%;
 }
