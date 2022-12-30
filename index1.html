@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index1_style.css">
+    <script src="https://kit.fontawesome.com/bcd6b6c56e.js" crossorigin="anonymous"></script>
     <title>banana</title>
 </head>
 
 <body>
+    <div id="mouse-trailer">
+        <i id="trailer-icon" class=""></i>
+    </div>
+    
     <div id="space-img" class="scrolling">
         <h1>Headers and Paragraphs</h1>
     </div>
-
+    
     <div id="greeter-text" class="mid-scroll">
-
         <h1>This is a size 1 header</h1>
         <h2>This is a size 2 header</h2>
         <h3>This is a size 3 header</h3>
         <h4>This is a size 4 header</h4>
         <h5>This is a size 5 header</h5>
         <h6>This is a size 6 header</h6>
-
+        
         <section>
             <p>This is a paragraph</p>
             <p><br><br>Headers are made with <cite>h1, h2, ... , h6</cite> tags,
@@ -32,12 +36,12 @@
     <div id="capy-img" class="scrolling">
         <h1>Special text</h1>
     </div>
-
+    
     <div id="special-text" class="mid-scroll">
         <section>
             <p>
                 <br>In a text field, you can make text <b>bold</b> or <strong>strong</strong>
-                with <cite>b</cite> and<cite>strong</cite>
+                with <cite>b</cite> and <cite>strong</cite>
             </p>
             
             <p>And you can make text <i>italic</i>, and <em>emphatic</em> with <cite>i</cite> and <cite>em</cite></p>
@@ -54,53 +58,126 @@
                 <cite>mark</cite> for <mark>highlighting</mark>
             </p>
             
-            <a href="https://google.com">You can use the <cite>a href=""</cite> tag for links</a>
+            <a href="https://google.com" target="_blank">You can use the <cite>a href=""</cite> tag for links</a>
+            <p>the <cite>target=""</cite> attribute specifies if the link opens in current <a href="https://google.com" target="_self" class="underline-less"><cite>_self</cite></a> or new <a href="https://google.com" target="_blank" class="underline-less"><cite>_blank</cite></a> tab</p>
         </section>
     </div>
-
+    
     <div id="mountain-img" class="scrolling">
         <h1>Even more special text</h1>
     </div>
-
+    
     <div id="more-special-text" class="mid-scroll">
         <section>
             <p><cite>var</cite> is used for showcasing <var>variables</var></p>
             <p><cite>kbd</cite> is for <kbd>keyboard input</kbd></p>
             <p><cite>code</cite> formats <code>computer code</code> such as:</p>
-
+            
             <code>for i in range(0, 10):<br>
                 print(i ** 2)
             </code>
-
+            
             <p>lastly <cite>sample</cite> shows a <sample>sample output</sample> of a computer (not really visible)</p>
         </section>
+    </div>
+    
+    <div id="fish-img" class="scrolling">
+        <h1>Special characters</h1>
+    </div>
+
+    <div id="special-chars" class="mid-scroll">
+        <p>Special characters can be made via entity tags &amp;{<i>n</i>}; 
+            where <i>n</i> is a name, a decimal or hex representation of the character</p>
+        <p>Some useful characters include:</p>
+        <table>
+            <tr>
+                <th>Character name</th> 
+                <th>Ampersand</th>
+                <th>Triangle bracket (L)</th>
+                <th>Triangle bracket (R)</th>
+                <th>Non-breaking space</th>
+                <th>Non-breaking hyphen</th>
+            </tr>
+            <tr>
+                <th>Symbol</th>
+                <th>&amp;</th>
+                <th>&lt;</th>
+                <th>&gt;</th>
+                <th>'&nbsp;'</th>
+                <th>&mdash;</th>
+            </tr> 
+            <tr>
+                <th>Name representation</th>
+                <td>&amp;amp;</td>
+                <td>&amp;lt;</td>
+                <td>&amp;gt;</td>
+                <td>&amp;nbsp;</td>
+                <td>&mdash;</td>
+            </tr>
+            <tr>
+                <th>Decimal representation</th>
+                <td>&amp;#38;</td>
+                <td>&amp;#60;</td>
+                <td>&amp;#62;</td>
+                <td>&amp;#160;</td>
+                <td>&amp;#8209;</td>
+            </tr>
+            <tr>
+                <th>Hex representation</th>
+                <td>&amp;#x26;</td>
+                <td>&amp;#x3C;</td>
+                <td>&amp;#x3E;</td>
+                <td>&amp;#xA0;</td>
+                <td>&amp;#x2011;</td>
+            </tr>
+        </table>
     </div>
 
     <div id="canyon-img" class="scrolling">
         <h1>Ordered lists</h1>
     </div>
-
-    <div id="ordered" class="mid-scroll">
+    
+    <div id="ordered"   class="mid-scroll">
         <ol>
-            <li>This</li>
-            <li>is</li>
-            <li>an</li>
-            <li>ordered</li>
-            <li>list</li>
+            <li>An ordered</li>
+            <li>list can</li>
+            <li>be made with</li>
+            <li>the <cite>ol</cite> tag</li>
+            <li>and each item</li>
+            <li>with an <cite>li</cite> tag</li>
+            <li>and it has multiple</li>
+            <li><i>list-style-type:</i> CSS options</li>
+            <li>(here, default)
+                <ol>
+                    <li>nesting is also</li>
+                    <li>possible</li>
+                </ol>
+            </li>
+            <li>to do</li>
         </ol>
     </div>
 
     <div id="jellyfish-img" class="scrolling">
         <h1>Unordered lists</h1>
     </div>
-
+    
     <div id="unordered" class="mid-scroll">
         <ul>
-            <li>This</li>
-            <li>is</li>
-            <li>an</li>
-            <li>unordered</li>
-            <li>list</li>
+            <li>An unordered</li>
+            <li>list can</li>
+            <li>be made with</li>
+            <li>the <cite>ul</cite> tag</li>
+            <li>and each item</li>
+            <li>with an <cite>li</cite> tag</li>
+            <li>and it has multiple</li>
+            <li><i>list-style-type:</i> CSS options</li>
+            <li>(here, square)
+                <ul>
+                    <li>nesting is also</li>
+                    <li>possible</li>
+                </ul>
+            </li>
+            <li>to do</li>
         </ul>
     </div>
 
@@ -145,20 +222,11 @@
         <p>(optional specificity tags can be used: <cite>thead</cite>, <cite>tbody</cite>, <cite>tfoot</cite>)</p>
     </div>
 
-
-    <div id="fish-img" class="scrolling">
+    <div id="desert-img" class="scrolling">
         <h1>Input fields</h1>
     </div>
 
-    <div id="input-fields" class="mid-scroll">
-
-    </div>
-
-    <div id="desert-img" class="scrolling">
-        <h1>Drop-down choice box</h1>
-    </div>
-
-    <div id="drop-down" class="mid-scroll">
+    <div id="Input fields" class="mid-scroll">
         <h2>This is a drop-down menu</h2>
         <select name="cat" id="based">
             <option value="1">Cute</option>
@@ -167,6 +235,7 @@
             <option value="4">The best</option>
         </select>
     </div>
+    <script src="index1_code.js"></script>
 </body>
 
 </html>
