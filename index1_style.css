@@ -6,6 +6,19 @@ body {
     margin: 0;
 }
 
+/* Scrollbar width and coloring ------------------------------------------------------ */
+body::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(242, 80, 107);
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
 /* Links, highlights and underlining ------------------------------------------------- */
 a {
     color: rgb(105, 197, 247);
@@ -21,14 +34,15 @@ mark {
 
 /* Tables and table elements --------------------------------------------------------- */
 table {
+    table-layout: fixed;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
     
     overflow-x: auto;
     margin: 25 px 0;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 2rem;
+    max-width: 4rem;
 }
 
 caption {
@@ -39,10 +53,12 @@ th, td, tr {
     border: 2px solid black;
 }
 
-th, td {
-    padding: 30px;
-    min-width: 150px;
-}
+@media screen and (min-width: 650px) {
+    th, td {
+        padding: 0.75rem;
+        min-width: 1rem;
+    }
+ }
 
 th {
     background-color: rgb(193, 193, 193);
@@ -50,6 +66,12 @@ th {
 
 tr {
     background-color: rgb(224, 223, 223);
+}
+
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 thead > * {
@@ -158,10 +180,6 @@ ul ul{
 
     pointer-events: none;
     transition: opacity 500ms ease;
-}
-
-body:hover > #mouse-trailer {
-    opacity: 1;
 }
 
 #trailer-icon {
