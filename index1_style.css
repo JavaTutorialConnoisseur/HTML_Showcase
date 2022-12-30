@@ -10,6 +10,14 @@ mark {
     background-color: rgb(203, 232, 248);
 }
 
+a {
+    color: rgb(105, 197, 247);
+}
+
+.underline-less{
+    text-decoration: none;
+}
+
 img {
     max-width: 20%;
 }
@@ -50,12 +58,16 @@ thead > * {
     border: 3px solid black;
 }
 
-ol {
-    list-style-type: armenian;
+ol ol {
+    list-style-type: lower-greek;
 }
 
 ul {
     list-style-type: square;
+}
+
+ul ul{
+    list-style: circle;
 }
 
 #space-img {
@@ -98,6 +110,14 @@ ul {
     padding-top: 25%;
 }
 
+#trailer-icon {
+    color: white;
+    font-size: 60%;
+    text-align: center;
+    position: relative;
+    top: -9%;
+}
+
 .scrolling h1 {
     text-align: center;
     padding: 35% 0;
@@ -116,10 +136,31 @@ ul {
 }
 
 #ordered, #unordered {
-    padding-left: 48%;
-    padding-right: 45%;
+    padding-left: 40%;
+    padding-right: 40%;
 }
 
 .mid-scroll {
     padding: 10% 0;
+}
+
+#mouse-trailer {
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    
+    z-index: 10000;
+    
+    background-color: black;
+    border-radius: 20px;
+    opacity: 0;
+
+    pointer-events: none;
+    transition: opacity 500ms ease;
+}
+
+body:hover > #mouse-trailer {
+    opacity: 1;
 }
