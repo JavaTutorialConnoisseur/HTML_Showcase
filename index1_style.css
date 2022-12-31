@@ -2,8 +2,186 @@ body {
     height: 100%;
     text-align: center;
     color: darkslategrey;
+    font-family: "Open sans", sans-serif;
     font-size: large;
     margin: 0;
+    padding: 0;
+}
+
+.html-preview {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    
+    padding: 0;
+    z-index: 10000;
+    
+    cursor: pointer;
+    background-color: rgb(27, 27, 27);
+    font-size: 0px;
+    
+    transition: 0.8s;
+}
+
+.html-preview svg {
+    width: 60%;
+    height: 60%;
+
+    position: relative;
+    fill: white;
+
+    transition: 0.8s;
+}
+
+.html-preview p {
+    position: relative;
+    bottom: 40%;
+}
+
+.html-preview p span {
+    position: absolute;
+    transform-origin: 0 100px;
+}
+
+.html-preview:hover {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+
+    font-size: 16px;
+    
+    animation-duration: 0.8s;
+    animation-name: rotate-starting-text;
+}
+
+.html-preview:active {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    font-size: 12px;
+}
+
+.html-preview:active p span {
+    animation-duration: 0.8s;
+    animation-name: rotate-text;
+
+    transform-origin: 0 80px;
+}
+
+.html-preview:not(:active) p span {
+    animation-duration: 0.8s;
+    animation-name: rotate-text-back; 
+}
+
+@keyframes rotate-text {
+    0% {
+        transform-origin: 0 100px;
+    }
+
+    100% {
+        transform-origin: 0 80px;
+    }
+}
+
+@keyframes rotate-text-back {
+    0% {
+        transform-origin: 0 80px;
+    }
+    
+    100% {
+        transform-origin: 0 100px;
+    }
+}
+
+/* Navbar styling -------------------------------------------------------------------- */
+.navbar {
+    height: 4rem;
+    width: 100%;
+    
+    position: fixed;
+    z-index: 1000;
+    
+    background-color: transparent;
+}
+
+.navbar-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+} 
+
+
+.navbar-item {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#navbar-first a svg{ /* do this better */
+    width: 48px;
+    height: 48px;
+}
+
+#navbar-second {
+    margin-left: auto;
+}
+
+.navbar-link {
+    display: flex;
+    flex-direction: column;
+    
+    height: 4rem;
+    width: auto;
+    align-items: center;
+    
+    font-size: larger;
+    text-decoration: none;
+    color: gray;
+}
+
+.navbar-link-icon {
+    fill: rgb(196, 194, 194);
+
+    stroke: #00000034;
+    stroke-width: .1px;
+
+    transition: 0.5s;
+}
+
+.navbar-link-back-light {
+    border-radius: 50%;
+    box-shadow:0 0 60px 30px black;
+    position: relative;
+    z-index: -10;
+    top: 10px;
+    transition: 0.55s;
+}
+
+.navbar-link-back-light:not(#navbar-first .navbar-link-back-light) {
+    z-index: -20;
+}
+
+#navbar-first .navbar-link-back-light {
+    top: 20px;
+}
+
+.navbar-link-text {
+    opacity: 0;
+    height: 4rem;
+    position: absolute;
+    top: 5rem;
+    transition: 0.55s;
+}
+
+.navbar-link:hover > * {
+    opacity: 1;
+    color: rgb(248, 132, 151);
+    fill: rgb(248, 132, 151);
+}
+
+.navbar-link:hover .navbar-link-back-light {
+    box-shadow:0 0 40px 15px rgb(248, 132, 151);
 }
 
 /* Scrollbar width and coloring ------------------------------------------------------ */
@@ -104,30 +282,11 @@ ul ul{
 /* Background images ----------------------------------------------------------------- */
 #space-img {
     background-image: url("images/space.jpg");
+    top: -8rem;
 }
 
 #capy-img {
     background-image: url("images/capybara.jpg");
-}
-
-#canyon-img {
-    background-image: url("images/canyon.jpg");
-}
-
-#mangroves-img {
-    background-image: url("images/mangroves.jpg");
-}
-
-#jellyfish-img {
-    background-image: url("images/jellyfish.jpg");
-}
-
-#desert-img {
-    background-image: url("images/desert.jpg");
-}
-
-#cabin-img {
-    background-image: url("images/cabin.jpg");
 }
 
 #mountain-img {
@@ -138,8 +297,24 @@ ul ul{
     background-image: url("images/fish.jpg");
 }
 
-#space-img h1 { /* Starting image padding */
-    padding-top: 25%;
+#canyon-img {
+    background-image: url("images/canyon.jpg");
+}
+
+#jellyfish-img {
+    background-image: url("images/jellyfish.jpg");
+}
+
+#mangroves-img {
+    background-image: url("images/mangroves.jpg");
+}
+
+#cabin-img {
+    background-image: url("images/cabin.jpg");
+}
+
+#desert-img {
+    background-image: url("images/desert.jpg");
 }
 
 /* Main page divs, scrolling background image formatting ----------------------------- */
@@ -162,6 +337,10 @@ ul ul{
 
 .mid-scroll {
     padding: 10% 0;
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Mouse trailer, icons on top and on-hover behavior --------------------------------- */
